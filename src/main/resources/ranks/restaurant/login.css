@@ -1,0 +1,66 @@
+.background-image {
+    -fx-opacity: 0.25;
+}
+
+.left-panel {
+    -fx-background-color: linear-gradient(to top left, #b60a15, #e2dc37);
+    -fx-padding: 40;
+}
+
+.brand-title {
+    -fx-text-fill: white;
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+}
+
+.brand-subtitle {
+    -fx-text-fill: #f1c40f;
+    -fx-font-size: 14px;
+}
+
+.image-placeholder {
+    -fx-background-color: rgba(255,255,255,0.15);
+    -fx-background-radius: 15;
+    -fx-border-radius: 15;
+    -fx-border-color: white;
+    -fx-border-width: 2;
+}
+
+.placeholder-text {
+    -fx-text-fill: white;
+}
+
+.login-card {
+    -fx-background-color: white;
+    -fx-padding: 40;
+    -fx-spacing: 20;
+    -fx-background-radius: 20 0 0 20;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 30, 0.4, 0, 5);
+}
+
+.login-title {
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+}
+
+.field-label {
+    -fx-font-size: 12px;
+    -fx-text-fill: #555;
+}
+
+.input-field {
+    -fx-pref-height: 35;
+    -fx-background-radius: 10;
+}
+
+.login-button {
+    -fx-pref-height: 40;
+    -fx-background-radius: 20;
+    -fx-background-color: #8B0000;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+.login-button:hover {
+    -fx-background-color: #a00000;
+}
