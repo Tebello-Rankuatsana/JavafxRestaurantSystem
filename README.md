@@ -71,7 +71,7 @@ The interface is designed to be:
 
 ## 📂 File Structure
 
-
+```
 JavaFX-Restaurant-POS/
 ├── src/
 │ └── ranks.restaurant/
@@ -83,7 +83,7 @@ JavaFX-Restaurant-POS/
 │ └── dark-surface-with-blank-space-fast-food-menu.jpg
 ├── README.md
 └── pom.xml (Maven)
-
+```
 
 ---
 
