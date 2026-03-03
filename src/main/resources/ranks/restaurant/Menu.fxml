@@ -50,12 +50,12 @@
             <Font name="Bauhaus 93" size="20.0" />
          </font>
       </Label>
-      <Label layoutX="764.0" layoutY="556.0" prefHeight="54.0" prefWidth="188.0" text="AMOUNT TENDERED" textFill="WHITE">
+      <Label fx:id="lblAmountTendered" layoutX="764.0" layoutY="556.0" prefHeight="54.0" prefWidth="188.0" text="AMOUNT TENDERED" textFill="WHITE">
          <font>
             <Font name="Bauhaus 93" size="20.0" />
          </font>
       </Label>
-      <Label layoutX="764.0" layoutY="643.0" prefHeight="54.0" prefWidth="188.0" text="CHANGE" textFill="WHITE">
+      <Label fx:id="lblChange" layoutX="764.0" layoutY="643.0" prefHeight="54.0" prefWidth="188.0" text="CHANGE" textFill="WHITE">
          <font>
             <Font name="Bauhaus 93" size="20.0" />
          </font>
@@ -78,17 +78,17 @@
       <Line endX="282.26666259765625" endY="-7.62939453125E-6" layoutX="258.0" layoutY="95.0" startX="-206.0" startY="-7.62939453125E-6" />
       <Line endX="282.26666259765625" endY="-7.62939453125E-6" layoutX="957.0" layoutY="95.0" startX="-206.0" startY="-7.62939453125E-6" />
       <Line endX="282.26666259765625" endY="-7.62939453125E-6" layoutX="259.0" layoutY="495.0" startX="-206.0" startY="-7.62939453125E-6" />
-      <CheckBox layoutX="76.0" layoutY="111.0" mnemonicParsing="false" prefHeight="68.0" prefWidth="433.0" text="Chicken Burger">
+      <CheckBox fx:id="CheckBoxChickenBurger" layoutX="76.0" layoutY="111.0" mnemonicParsing="false" prefHeight="68.0" prefWidth="433.0" text="Chicken Burger">
          <font>
             <Font name="Bauhaus 93" size="20.0" />
          </font>
       </CheckBox>
-      <CheckBox layoutX="76.0" layoutY="187.5" mnemonicParsing="false" prefHeight="68.0" prefWidth="433.0" text="Beef Burger">
+      <CheckBox fx:id="CheckBoxBeefBurger" layoutX="76.0" layoutY="187.5" mnemonicParsing="false" prefHeight="68.0" prefWidth="433.0" text="Beef Burger">
          <font>
             <Font name="Bauhaus 93" size="20.0" />
          </font>
       </CheckBox>
-      <CheckBox layoutX="76.0" layoutY="264.0" mnemonicParsing="false" prefHeight="68.0" prefWidth="433.0" text="Chicken Burger">
+      <CheckBox fx:id="CheckBoxCheeseBurger" layoutX="76.0" layoutY="264.0" mnemonicParsing="false" prefHeight="68.0" prefWidth="433.0" text="Cheese Burger">
          <font>
             <Font name="Bauhaus 93" size="20.0" />
          </font>
@@ -108,17 +108,17 @@
             <Font name="Bauhaus 93" size="27.0" />
          </font>
       </Label>
-      <RadioButton layoutX="813.0" layoutY="111.0" mnemonicParsing="false" prefHeight="68.0" prefWidth="433.0" text="Strawberry Short Cake">
+      <RadioButton fx:id="RadioButtonStrawberry" layoutX="813.0" layoutY="111.0" mnemonicParsing="false" prefHeight="68.0" prefWidth="433.0" text="Strawberry Short Cake">
          <font>
             <Font name="Bauhaus 93" size="20.0" />
          </font>
       </RadioButton>
-      <RadioButton layoutX="813.0" layoutY="187.5" mnemonicParsing="false" prefHeight="68.0" prefWidth="433.0" text="Choco Milk-Shake">
+      <RadioButton fx:id="RadioButtonChoco" layoutX="813.0" layoutY="187.5" mnemonicParsing="false" prefHeight="68.0" prefWidth="433.0" text="Choco Milk-Shake">
          <font>
             <Font name="Bauhaus 93" size="20.0" />
          </font>
       </RadioButton>
-      <RadioButton layoutX="813.0" layoutY="264.0" mnemonicParsing="false" prefHeight="68.0" prefWidth="433.0" text="Vanilla Pound Cake">
+      <RadioButton fx:id="RadioButtonVanilla" layoutX="813.0" layoutY="264.0" mnemonicParsing="false" prefHeight="68.0" prefWidth="433.0" text="Vanilla Pound Cake">
          <font>
             <Font name="Bauhaus 93" size="20.0" />
          </font>
