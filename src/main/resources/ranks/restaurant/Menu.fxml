@@ -45,7 +45,7 @@
          <font>
             <Font name="Bauhaus 93" size="16.0" />
          </font></Button>
-      <Label layoutX="764.0" layoutY="469.0" prefHeight="54.0" prefWidth="188.0" text="TOTAL AMOUNT" textFill="WHITE">
+      <Label fx:id="lblTotalAmount" layoutX="764.0" layoutY="469.0" prefHeight="54.0" prefWidth="188.0" text="TOTAL AMOUNT" textFill="WHITE">
          <font>
             <Font name="Bauhaus 93" size="20.0" />
          </font>
@@ -128,7 +128,7 @@
             <Font name="Bauhaus 93" size="24.0" />
          </font>
       </Label>
-      <MenuButton layoutX="297.0" layoutY="588.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="175.0" text="Apple Juice" textFill="#ff5722">
+      <MenuButton fx:id="DrinkMenuButton" layoutX="297.0" layoutY="588.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="175.0" text="Apple Juice" textFill="#ff5722">
         <items>
           <MenuItem mnemonicParsing="false" text="Sprite" />
           <MenuItem mnemonicParsing="false" text="Pepsi" />
