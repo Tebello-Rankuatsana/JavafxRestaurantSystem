@@ -1,60 +1,100 @@
 package ranks.restaurant;
 
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.CheckBox;
-import javafx.scene.control.MenuButton;
-import javafx.scene.control.RadioButton;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 
 public class Menu {
 
-    @FXML
-    private CheckBox CheckBoxBeefBurger;
+    @FXML private CheckBox CheckBoxBeefBurger;
+    @FXML private CheckBox CheckBoxCheeseBurger;
+    @FXML private CheckBox CheckBoxChickenBurger;
 
-    @FXML
-    private CheckBox CheckBoxCheeseBurger;
+    @FXML private RadioButton RadioButtonChoco;
+    @FXML private RadioButton RadioButtonStrawberry;
+    @FXML private RadioButton RadioButtonVanilla;
 
-    @FXML
-    private CheckBox CheckBoxChickenBurger;
+    @FXML private ToggleGroup dessertGroup;
 
-    @FXML
-    private MenuButton DrinkMenuButton;
+    @FXML private MenuButton DrinkMenuButton;
 
-    @FXML
-    private RadioButton RadioButtonChoco;
+    @FXML private Button btnChange;
+    @FXML private Button btnExit;
+    @FXML private Button btnReset;
+    @FXML private Button btnTotalAmount;
 
-    @FXML
-    private RadioButton RadioButtonStrawberry;
+    @FXML private TextField lblAmountTendered;
+    @FXML private TextField lblChange;
+    @FXML private TextField lblTotalAmount;
 
-    @FXML
-    private RadioButton RadioButtonVanilla;
+    double total = 0;
 
+//    update tool amount
     @FXML
-    private Button btnChange;
+    void updateTotal(ActionEvent event) {
 
-    @FXML
-    private Button btnExit;
+        total = 0;
 
-    @FXML
-    private Button btnReset;
+        // Dinner Prices
+        if (CheckBoxChickenBurger.isSelected()) total += 50;
+        if (CheckBoxBeefBurger.isSelected()) total += 60;
+        if (CheckBoxCheeseBurger.isSelected()) total += 55;
 
-    @FXML
-    private Button btnTotalAmount;
+        // Dessert Prices
+        if (RadioButtonStrawberry.isSelected()) total += 40;
+        if (RadioButtonChoco.isSelected()) total += 35;
+        if (RadioButtonVanilla.isSelected()) total += 30;
 
-    @FXML
-    private TextField lblAmountTendered;
-
-    @FXML
-    private TextField lblChange;
-
-    @FXML
-    private TextField lblTotalAmount;
-
-    @FXML
-    void closeWindow(ActionEvent event) {
-
+        lblTotalAmount.setText(String.valueOf(total));
     }
 
+//    calculating change method
+    @FXML
+    void calculateChange(ActionEvent event) {
+
+        try {
+            double tendered = Double.parseDouble(lblAmountTendered.getText());
+            double change = tendered - total;
+
+            if (change < 0) {
+                showAlert("Insufficient Amount!");
+            } else {
+                lblChange.setText(String.valueOf(change));
+            }
+
+        } catch (NumberFormatException e) {
+            showAlert("Enter valid number!");
+        }
+    }
+
+//    reseting
+    @FXML
+    void resetSystem(ActionEvent event) {
+
+        CheckBoxChickenBurger.setSelected(false);
+        CheckBoxBeefBurger.setSelected(false);
+        CheckBoxCheeseBurger.setSelected(false);
+
+        dessertGroup.selectToggle(null);
+
+        lblTotalAmount.clear();
+        lblAmountTendered.clear();
+        lblChange.clear();
+
+        total = 0;
+    }
+
+//    closing the window
+    @FXML
+    void closeWindow(ActionEvent event) {
+        Platform.exit();
+    }
+
+//    the alert method
+    private void showAlert(String message) {
+        Alert alert = new Alert(Alert.AlertType.WARNING);
+        alert.setContentText(message);
+        alert.show();
+    }
 }
