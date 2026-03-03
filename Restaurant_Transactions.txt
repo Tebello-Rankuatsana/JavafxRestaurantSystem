@@ -1,0 +1,38 @@
+====================================
+Transaction Time: 2026-03-03 23:16:24
+
+Chicken Burger - R50
+Beef Burger - R60
+Strawberry Short Cake - R40
+
+Total: R150,00
+Amount Tendered: R500.0
+Change: R350,00
+====================================
+
+====================================
+Transaction Time: 2026-03-03 23:16:44
+
+Chicken Burger - R50
+Beef Burger - R60
+Cheese Burger - R55
+Strawberry Short Cake - R40
+Sprite - R15.0
+
+Total: R220,00
+Amount Tendered: R500.0
+Change: R280,00
+====================================
+
+====================================
+Transaction Time: 2026-03-03 23:17:22
+
+Beef Burger - R60
+Strawberry Short Cake - R40
+Kool Aid - R12.0
+
+Total: R112,00
+Amount Tendered: R340.0
+Change: R228,00
+====================================
+
