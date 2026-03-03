@@ -25,9 +25,7 @@ public class GlassLoginDemo extends Application {
         StackPane root = new StackPane();
 //        testing pull request
 
-        // -------------------------
-        // BACKGROUND IMAGE
-        // -------------------------
+//        background image
         ImageView background = new ImageView(
                 new Image("https://images.unsplash.com/photo-1550547660-d9450f859349")
         );
@@ -53,9 +51,7 @@ public class GlassLoginDemo extends Application {
         overlay.prefWidthProperty().bind(root.widthProperty());
         overlay.prefHeightProperty().bind(root.heightProperty());
 
-        // -------------------------
-        // GLASS CARD
-        // -------------------------
+// glass card
         HBox card = new HBox();
         card.setPrefSize(800, 450);
         card.setAlignment(Pos.CENTER);
