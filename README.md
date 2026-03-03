@@ -1,8 +1,8 @@
-###🍔 JavaFX Restaurant POS System
+### 🍔 JavaFX Restaurant POS System
 
 Welcome to the JavaFX Restaurant POS System, a visually appealing and interactive food ordering application designed to mimic a real-world Point of Sale (POS) system for a restaurant. This project is perfect for showcasing creativity, JavaFX skills, and event-driven programming in Java!
 
-##🌟 Project Overview
+## 🌟 Project Overview
 
 This application allows users to:
 
@@ -20,7 +20,7 @@ Record each transaction into a Notepad file with a timestamp
 
 The system mimics a POS workflow, incrementing the total as the user selects items, just like a real restaurant cashier system.
 
-##🖥️ Features
+## 🖥️ Features
 
 ✅ Interactive UI: Beautifully designed with backgrounds, images, and styled controls.
 
@@ -42,7 +42,7 @@ Transaction timestamp
 
 ✅ Reset & Exit Buttons: Quickly clear the form or exit the application.
 
-🎨 User Interface
+## 🎨 User Interface
 
 The interface is designed to be:
 
