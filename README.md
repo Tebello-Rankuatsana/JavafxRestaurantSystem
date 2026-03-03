@@ -1,104 +1,99 @@
-### 🍔 JavaFX Restaurant POS System
+# 🍔 JavaFX Restaurant POS System
 
-Welcome to the JavaFX Restaurant POS System, a visually appealing and interactive food ordering application designed to mimic a real-world Point of Sale (POS) system for a restaurant. This project is perfect for showcasing creativity, JavaFX skills, and event-driven programming in Java!
+Welcome to the **JavaFX Restaurant POS System**, a visually appealing and interactive food ordering application designed to mimic a real-world **Point of Sale (POS) system** for a restaurant. This project showcases creativity, JavaFX skills, and event-driven programming in Java.
+
+---
 
 ## 🌟 Project Overview
 
 This application allows users to:
 
-Select Dinner items (Chicken Burger, Beef Burger, Cheese Burger)
+- Select **Dinner items** (Chicken Burger, Beef Burger, Cheese Burger)  
+- Choose **Desserts** (Strawberry Short Cake, Choco Milk-Shake, Vanilla Pound Cake)  
+- Pick **Drinks** from a menu (Sprite, Pepsi, Kool Aid, etc.)  
+- Enter the **cash paid / Amount Tendered**  
+- Automatically calculate **Total Amount** and **Change**  
+- Record each transaction into a **Notepad file** with a **timestamp**  
 
-Choose Desserts (Strawberry Short Cake, Choco Milk-Shake, Vanilla Pound Cake)
+The system mimics a **POS workflow**, incrementing the total as the user selects items, just like a real restaurant cashier system.
 
-Pick Drinks from a menu (Sprite, Pepsi, Kool Aid, etc.)
-
-Enter the cash paid / Amount Tendered
-
-Automatically calculate Total Amount and Change
-
-Record each transaction into a Notepad file with a timestamp
-
-The system mimics a POS workflow, incrementing the total as the user selects items, just like a real restaurant cashier system.
+---
 
 ## 🖥️ Features
 
-✅ Interactive UI: Beautifully designed with backgrounds, images, and styled controls.
+- ✅ **Interactive UI**: Beautifully designed with backgrounds, images, and styled controls.  
+- ✅ **Dynamic Calculation**: Totals update automatically when the user selects dinner, dessert, or drinks.  
+- ✅ **Change Calculation**: Enter the amount tendered, and the system computes the change.  
+- ✅ **Transaction Logging**: Saves all transactions to a `Restaurant_Transactions.txt` file with:
+  - Items ordered  
+  - Total amount  
+  - Amount tendered  
+  - Change  
+  - **Transaction timestamp**  
+- ✅ **Reset & Exit Buttons**: Quickly clear the form or exit the application.
 
-✅ Dynamic Calculation: Totals update automatically when the user selects dinner, dessert, or drinks.
-
-✅ Change Calculation: Enter the amount tendered, and the system computes the change.
-
-✅ Transaction Logging: Saves all transactions to a Restaurant_Transactions.txt file with:
-
-Items ordered
-
-Total amount
-
-Amount tendered
-
-Change
-
-Transaction timestamp
-
-✅ Reset & Exit Buttons: Quickly clear the form or exit the application.
+---
 
 ## 🎨 User Interface
 
 The interface is designed to be:
 
-Appealing & Modern: Transparent panels, custom fonts, and highlighted colors
+- **Appealing & Modern**: Transparent panels, custom fonts, and highlighted colors  
+- **Intuitive**: Easy-to-understand sections for Dinner, Dessert, Drinks, and Payment  
+- **Functional**: Total and change fields are clearly displayed and updated in real-time  
 
-Intuitive: Easy-to-understand sections for Dinner, Dessert, Drinks, and Payment
+![Restaurant POS UI](./images/screenshot.png)  
+*Example of the UI showing Dinner, Dessert, Drinks, and Payment sections*
 
-Functional: Total and change fields are clearly displayed and updated in real-time
+---
+
+## 🛠️ Technologies Used
+
+- **Java 17+**  
+- **JavaFX 25** for UI components  
+- **FXML** for declarative UI design  
+- **File I/O** for transaction logging (Notepad `.txt` file)  
+- **Event-driven programming** for interactive selection and calculation
+
+---
+
+## 💡 How It Works
+
+1. The user selects dinner items, desserts, and drinks.  
+2. The total amount updates dynamically as items are chosen.  
+3. The user enters the **amount tendered** in the provided field.  
+4. Clicking **Change** calculates the change and saves the transaction to a notepad file with the **date and time**.  
+5. The **Reset** button clears the selections and allows for a new order.  
+
+> Tip: Try different combinations of items to see the system increment totals like a real POS!
+
+---
+
+## 📂 File Structure
 
 
-Example of the UI showing Dinner, Dessert, Drinks, and Payment sections
-
-🛠️ Technologies Used
-
-Java 17+
-
-JavaFX 25 for UI components
-
-FXML for declarative UI design
-
-File I/O for transaction logging (Notepad .txt file)
-
-Event-driven programming for interactive selection and calculation
-
-💡 How It Works
-
-The user selects dinner items, desserts, and drinks.
-
-The total amount updates dynamically as items are chosen.
-
-The user enters the amount tendered in the provided field.
-
-Clicking Change calculates the change and saves the transaction to a notepad file with the date and time.
-
-The Reset button clears the selections and allows for a new order.
-
-Tip: Make sure to try different combinations of items to see the system increment totals just like a real POS!
-
-📂 File Structure
 JavaFX-Restaurant-POS/
 │
 ├── src/
-│   └── ranks.restaurant/
-│       ├── Menu.java          # Controller handling all actions
-│       └── Menu.fxml          # FXML UI layout
+│ └── ranks.restaurant/
+│ ├── Menu.java # Controller handling all actions
+│ └── Menu.fxml # FXML UI layout
 │
-├── Restaurant_Transactions.txt  # Generated by the application
+├── Restaurant_Transactions.txt # Generated by the application
 ├── images/
-│   ├── restaurant logo.png
-│   └── dark-surface-with-blank-space-fast-food-menu.jpg
+│ ├── restaurant logo.png
+│ └── dark-surface-with-blank-space-fast-food-menu.jpg
 ├── README.md
 └── pom.xml / build.gradle (if using Maven/Gradle)
-🚀 Getting Started
 
-Clone the repository:
 
+---
+
+## 🚀 Getting Started
+
+1. Clone the repository:  
+
+```bash
 git clone https://github.com/yourusername/JavaFX-Restaurant-POS.git
 
 Open the project in IntelliJ IDEA or Eclipse with JavaFX support.
