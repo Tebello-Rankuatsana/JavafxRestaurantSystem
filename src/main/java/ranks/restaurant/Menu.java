@@ -5,6 +5,11 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 
+import java.io.FileWriter;
+import java.io.IOException;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
 public class Menu {
 
     @FXML private CheckBox CheckBoxBeefBurger;
@@ -28,9 +33,36 @@ public class Menu {
     @FXML private TextField lblChange;
     @FXML private TextField lblTotalAmount;
 
-    double total = 0;
+    private double total = 0;
+    private double drinkPrice = 0;
 
-//    update tool amount
+//    the drink selection
+    @FXML
+    void selectDrink(ActionEvent event) {
+
+        MenuItem selectedItem = (MenuItem) event.getSource();
+        String drink = selectedItem.getText();
+
+        DrinkMenuButton.setText(drink);
+
+        switch (drink) {
+            case "Sprite":
+                drinkPrice = 15;
+                break;
+            case "Pepsi":
+                drinkPrice = 18;
+                break;
+            case "Kool Aid":
+                drinkPrice = 12;
+                break;
+            default:
+                drinkPrice = 0;
+        }
+
+        updateTotal(null);
+    }
+
+//    calculating the total
     @FXML
     void updateTotal(ActionEvent event) {
 
@@ -46,10 +78,13 @@ public class Menu {
         if (RadioButtonChoco.isSelected()) total += 35;
         if (RadioButtonVanilla.isSelected()) total += 30;
 
-        lblTotalAmount.setText(String.valueOf(total));
+        // Drink Price
+        total += drinkPrice;
+
+        lblTotalAmount.setText(String.format("%.2f", total));
     }
 
-//    calculating change method
+//    calculating the change
     @FXML
     void calculateChange(ActionEvent event) {
 
@@ -60,7 +95,11 @@ public class Menu {
             if (change < 0) {
                 showAlert("Insufficient Amount!");
             } else {
-                lblChange.setText(String.valueOf(change));
+
+                lblChange.setText(String.format("%.2f", change));
+
+                // Save transaction to file
+                saveTransaction(tendered, change);
             }
 
         } catch (NumberFormatException e) {
@@ -68,7 +107,58 @@ public class Menu {
         }
     }
 
-//    reseting
+//    this is where we are writing to the notepad
+    private void saveTransaction(double tendered, double change) {
+
+        try {
+
+            FileWriter writer = new FileWriter("Restaurant_Transactions.txt", true);
+
+            DateTimeFormatter formatter =
+                    DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+
+            String time = LocalDateTime.now().format(formatter);
+
+            writer.write("====================================\n");
+            writer.write("Transaction Time: " + time + "\n\n");
+
+            // Dinner
+            if (CheckBoxChickenBurger.isSelected())
+                writer.write("Chicken Burger - R50\n");
+
+            if (CheckBoxBeefBurger.isSelected())
+                writer.write("Beef Burger - R60\n");
+
+            if (CheckBoxCheeseBurger.isSelected())
+                writer.write("Cheese Burger - R55\n");
+
+            // Dessert
+            if (RadioButtonStrawberry.isSelected())
+                writer.write("Strawberry Short Cake - R40\n");
+
+            if (RadioButtonChoco.isSelected())
+                writer.write("Choco Milk-Shake - R35\n");
+
+            if (RadioButtonVanilla.isSelected())
+                writer.write("Vanilla Pound Cake - R30\n");
+
+            // Drink
+            if (drinkPrice > 0)
+                writer.write(DrinkMenuButton.getText() + " - R" + drinkPrice + "\n");
+
+            writer.write("\nTotal: R" + String.format("%.2f", total) + "\n");
+            writer.write("Amount Tendered: R" + tendered + "\n");
+            writer.write("Change: R" + String.format("%.2f", change) + "\n");
+            writer.write("====================================\n\n");
+
+            writer.close();
+
+        } catch (IOException e) {
+            showAlert("Error saving transaction!");
+        }
+    }
+
+//    reset event
     @FXML
     void resetSystem(ActionEvent event) {
 
@@ -78,6 +168,9 @@ public class Menu {
 
         dessertGroup.selectToggle(null);
 
+        DrinkMenuButton.setText("Apple Juice");
+        drinkPrice = 0;
+
         lblTotalAmount.clear();
         lblAmountTendered.clear();
         lblChange.clear();
@@ -85,13 +178,13 @@ public class Menu {
         total = 0;
     }
 
-//    closing the window
+//   closing the window by pressing the exit button
     @FXML
     void closeWindow(ActionEvent event) {
         Platform.exit();
     }
 
-//    the alert method
+//    the alert
     private void showAlert(String message) {
         Alert alert = new Alert(Alert.AlertType.WARNING);
         alert.setContentText(message);
