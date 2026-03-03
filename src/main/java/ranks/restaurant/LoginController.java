@@ -97,17 +97,17 @@ public class LoginController {
         }
 
 //        login button with hover animation
-        btnLogin.setOnMouseEntered(e -> scaleButtonHover(btnLogin, 1.05));
-        btnLogin.setOnMouseExited(e -> scaleButtonHover(btnLogin, 1.0));
+//        btnLogin.setOnMouseEntered(e -> scaleButtonHover(btnLogin, 1.05));
+//        btnLogin.setOnMouseExited(e -> scaleButtonHover(btnLogin, 1.0));
     }
 
 //  scale button on hover
-    private void scaleButtonHover(Button btn, double scale) {
-        ScaleTransition st = new ScaleTransition(Duration.millis(150), btn);
-        st.setToX(scale);
-        st.setToY(scale);
-        st.play();
-    }
+//    private void scaleButtonHover(Button btn, double scale) {
+//        ScaleTransition st = new ScaleTransition(Duration.millis(150), btn);
+//        st.setToX(scale);
+//        st.setToY(scale);
+//        st.play();
+//    }
 
 //    shake animation for incorrect credentials
     public void shake(Node node) {
