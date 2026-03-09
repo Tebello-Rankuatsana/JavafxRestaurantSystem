@@ -10,7 +10,7 @@ import java.io.IOException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
-public class Menu {
+public class MenuController {
 
     @FXML private CheckBox CheckBoxBeefBurger;
     @FXML private CheckBox CheckBoxCheeseBurger;
@@ -119,8 +119,8 @@ public class Menu {
 
             String time = LocalDateTime.now().format(formatter);
 
-            writer.write("====================================\n");
-            writer.write("Transaction Time: " + time + "\n\n");
+            writer.write("--------------------------------------------\n");
+            writer.write("Time: " + time + "\n\n");
 
             // Dinner
             if (CheckBoxChickenBurger.isSelected())
@@ -149,7 +149,7 @@ public class Menu {
             writer.write("\nTotal: R" + String.format("%.2f", total) + "\n");
             writer.write("Amount Tendered: R" + tendered + "\n");
             writer.write("Change: R" + String.format("%.2f", change) + "\n");
-            writer.write("====================================\n\n");
+            writer.write("--------------------------------------------\n\n");
 
             writer.close();
 
