@@ -1,4 +1,4 @@
-====================================
+--------------------------------------------
 Transaction Time: 2026-03-03 23:16:24
 
 Chicken Burger - R50
@@ -8,9 +8,9 @@ Strawberry Short Cake - R40
 Total: R150,00
 Amount Tendered: R500.0
 Change: R350,00
-====================================
+--------------------------------------------
 
-====================================
+--------------------------------------------
 Transaction Time: 2026-03-03 23:16:44
 
 Chicken Burger - R50
@@ -22,9 +22,9 @@ Sprite - R15.0
 Total: R220,00
 Amount Tendered: R500.0
 Change: R280,00
-====================================
+--------------------------------------------
 
-====================================
+--------------------------------------------
 Transaction Time: 2026-03-03 23:17:22
 
 Beef Burger - R60
@@ -34,5 +34,68 @@ Kool Aid - R12.0
 Total: R112,00
 Amount Tendered: R340.0
 Change: R228,00
-====================================
+--------------------------------------------
+
+--------------------------------------------
+Transaction Time: 2026-03-09 02:54:15
+
+Chicken Burger - R50
+Beef Burger - R60
+Cheese Burger - R55
+
+Total: R165,00
+Amount Tendered: R250.0
+Change: R85,00
+--------------------------------------------
+
+--------------------------------------------
+Transaction Time: 2026-03-09 02:54:25
+
+Chicken Burger - R50
+Beef Burger - R60
+Cheese Burger - R55
+Strawberry Short Cake - R40
+
+Total: R205,00
+Amount Tendered: R250.0
+Change: R45,00
+--------------------------------------------
+
+--------------------------------------------
+Transaction Time: 2026-03-09 02:54:35
+
+Chicken Burger - R50
+Beef Burger - R60
+Cheese Burger - R55
+Strawberry Short Cake - R40
+Sprite - R15.0
+
+Total: R220,00
+Amount Tendered: R250.0
+Change: R30,00
+--------------------------------------------
+
+--------------------------------------------
+Time: 2026-03-09 02:56:34
+
+Chicken Burger - R50
+Choco Milk-Shake - R35
+Pepsi - R18.0
+
+Total: R103,00
+Amount Tendered: R103.5
+Change: R0,50
+--------------------------------------------
+
+--------------------------------------------
+Time: 2026-03-09 02:56:42
+
+Chicken Burger - R50
+Choco Milk-Shake - R35
+Kool Aid - R12.0
+
+Total: R97,00
+Amount Tendered: R103.5
+Change: R6,50
+--------------------------------------------
 
