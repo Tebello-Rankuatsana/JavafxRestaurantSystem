@@ -74,20 +74,21 @@ public class LoginController {
         }
 
         if (authenticated) {
-            System.out.println("Login Successful!");
+            try {
+//                redirecting to the menu page when credentials are correct
+                Parent root = FXMLLoader.load(getClass().getResource("menu.fxml"));
+                Stage stage = (Stage) btnLogin.getScene().getWindow();
+                stage.setScene(new Scene(root));
+                stage.show();
 
-            // You can load the dashboard scene here later
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
 
         } else {
-
             shake(txtUsername);
             shake(txtPassword);
             txtPassword.clear();
-
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setHeaderText(null);
-            alert.setContentText("Invalid username or password");
-            alert.showAndWait();
         }
     }
 
