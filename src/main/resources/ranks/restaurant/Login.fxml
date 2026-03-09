@@ -69,7 +69,20 @@
                               <Font name="Arial Black" size="23.0" />
                            </font>
                         </PasswordField>
-                        <Button fx:id="btnLogin" layoutX="239.0" layoutY="560.0" mnemonicParsing="false" style="-fx-background-color: #FF5722; -fx-text-fill: white; -fx-background-radius: 25; -fx-font-weight: bold;" text="Login" onAction="#handleLogin">
+<!--                        adding a fixed button size so javafx animations don't negatively impact it-->
+                        <Button fx:id="btnLogin"
+                                layoutX="239.0"
+                                layoutY="560.0"
+                                prefHeight="60.0"
+                                prefWidth="200.0"
+                                minHeight="60.0"
+                                minWidth="200.0"
+                                maxHeight="60.0"
+                                maxWidth="200.0"
+                                mnemonicParsing="false"
+                                onAction="#handleLogin"
+                                style="-fx-background-color: #FF5722; -fx-text-fill: white; -fx-background-radius: 25; -fx-font-weight: bold;"
+                                text="Login">
                            <font>
                               <Font name="Arial Black" size="24.0" />
                            </font>
