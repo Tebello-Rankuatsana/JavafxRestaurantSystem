@@ -2,6 +2,7 @@ package ranks.restaurant;
 
 import javafx.animation.*;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
@@ -75,11 +76,14 @@ public class LoginController {
 
         } else {
 
-            System.out.println("Invalid Credentials");
-
             shake(txtUsername);
             shake(txtPassword);
             txtPassword.clear();
+
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setHeaderText(null);
+            alert.setContentText("Invalid username or password");
+            alert.showAndWait();
         }
     }
 
