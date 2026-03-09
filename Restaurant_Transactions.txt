@@ -99,3 +99,16 @@ Amount Tendered: R103.5
 Change: R6,50
 --------------------------------------------
 
+--------------------------------------------
+Time: 2026-03-09 03:31:22
+
+Chicken Burger - R50
+Beef Burger - R60
+Choco Milk-Shake - R35
+Pepsi - R18.0
+
+Total: R163,00
+Amount Tendered: R200.0
+Change: R37,00
+--------------------------------------------
+
