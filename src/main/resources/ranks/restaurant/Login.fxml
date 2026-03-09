@@ -29,7 +29,7 @@
             <GaussianBlur radius="25.0" />
          </effect>
       </ImageView>
-      <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: gree rgba(0,0,0,0.35)n;" />
+      <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: rgba(0,0,0,0.35);" />
       <HBox prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: rgba(255,255,255,0.15); -fx-background-radius: 10; -fx-border-radius: 15; -fx-border-color: rgba(255,255,255,0.3); -fx-border-width: 1;" StackPane.alignment="CENTER">
          <children>
             <VBox fx:id="leftVBox" alignment="TOP_CENTER" prefHeight="898.0" prefWidth="604.0" style="-fx-background-color: rgba(0,0,0,0.40);">
