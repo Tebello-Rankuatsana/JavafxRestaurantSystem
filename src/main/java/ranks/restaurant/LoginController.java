@@ -109,8 +109,8 @@ public class LoginController {
         bgZoom.setCycleCount(Animation.INDEFINITE);
         bgZoom.play();
 
-//        glass entrance
-        Node loginCard = rightVBox.getParent(); // HBox containing leftVBox + rightVBox
+        Node loginCard = rightVBox.getParent();
+
         loginCard.setOpacity(0);
         loginCard.setScaleX(0.9);
         loginCard.setScaleY(0.9);
@@ -119,6 +119,8 @@ public class LoginController {
         cardFade.setToValue(1);
 
         ScaleTransition cardScale = new ScaleTransition(Duration.millis(500), loginCard);
+        cardScale.setFromX(0.9);
+        cardScale.setFromY(0.9);
         cardScale.setToX(1);
         cardScale.setToY(1);
 
