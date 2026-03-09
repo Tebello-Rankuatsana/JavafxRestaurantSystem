@@ -10,6 +10,9 @@ import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.Node;
 import javafx.util.Duration;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
 
 public class LoginController {
 
@@ -36,6 +39,49 @@ public class LoginController {
 
     @FXML
     private Button btnLogin;
+
+    @FXML
+    private void handleLogin() {
+        String username = txtUsername.getText().trim();
+        String password = txtPassword.getText().trim();
+
+        boolean authenticated = false;
+
+        try (BufferedReader reader = new BufferedReader(new FileReader("accounts.txt"))) {
+
+            String line;
+
+            while ((line = reader.readLine()) != null) {
+
+                String[] parts = line.split(",");
+
+                String storedUser = parts[0];
+                String storedPass = parts[1];
+
+                if (username.equals(storedUser) && password.equals(storedPass)) {
+                    authenticated = true;
+                    break;
+                }
+            }
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        if (authenticated) {
+            System.out.println("Login Successful!");
+
+            // You can load the dashboard scene here later
+
+        } else {
+
+            System.out.println("Invalid Credentials");
+
+            shake(txtUsername);
+            shake(txtPassword);
+            txtPassword.clear();
+        }
+    }
 
     @FXML
     public void initialize() {
@@ -97,17 +143,17 @@ public class LoginController {
         }
 
 //        login button with hover animation
-//        btnLogin.setOnMouseEntered(e -> scaleButtonHover(btnLogin, 1.05));
-//        btnLogin.setOnMouseExited(e -> scaleButtonHover(btnLogin, 1.0));
+        btnLogin.setOnMouseEntered(e -> scaleButtonHover(btnLogin, 1.05));
+        btnLogin.setOnMouseExited(e -> scaleButtonHover(btnLogin, 1.0));
     }
 
 //  scale button on hover
-//    private void scaleButtonHover(Button btn, double scale) {
-//        ScaleTransition st = new ScaleTransition(Duration.millis(150), btn);
-//        st.setToX(scale);
-//        st.setToY(scale);
-//        st.play();
-//    }
+    private void scaleButtonHover(Button btn, double scale) {
+        ScaleTransition st = new ScaleTransition(Duration.millis(150), btn);
+        st.setToX(scale);
+        st.setToY(scale);
+        st.play();
+    }
 
 //    shake animation for incorrect credentials
     public void shake(Node node) {
