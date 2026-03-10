@@ -124,31 +124,31 @@ public class MenuController {
 
             // Dinner
             if (CheckBoxChickenBurger.isSelected())
-                writer.write("Chicken Burger - R50\n");
+                writer.write("Chicken Burger - M50\n");
 
             if (CheckBoxBeefBurger.isSelected())
-                writer.write("Beef Burger - R60\n");
+                writer.write("Beef Burger - M60\n");
 
             if (CheckBoxCheeseBurger.isSelected())
-                writer.write("Cheese Burger - R55\n");
+                writer.write("Cheese Burger - M55\n");
 
             // Dessert
             if (RadioButtonStrawberry.isSelected())
-                writer.write("Strawberry Short Cake - R40\n");
+                writer.write("Strawberry Short Cake - M40\n");
 
             if (RadioButtonChoco.isSelected())
-                writer.write("Choco Milk-Shake - R35\n");
+                writer.write("Choco Milk-Shake - M35\n");
 
             if (RadioButtonVanilla.isSelected())
-                writer.write("Vanilla Pound Cake - R30\n");
+                writer.write("Vanilla Pound Cake - M30\n");
 
             // Drink
             if (drinkPrice > 0)
-                writer.write(DrinkMenuButton.getText() + " - R" + drinkPrice + "\n");
+                writer.write(DrinkMenuButton.getText() + " - M" + drinkPrice + "\n");
 
-            writer.write("\nTotal: R" + String.format("%.2f", total) + "\n");
-            writer.write("Amount Tendered: R" + tendered + "\n");
-            writer.write("Change: R" + String.format("%.2f", change) + "\n");
+            writer.write("\nTotal: M" + String.format("%.2f", total) + "\n");
+            writer.write("Amount Tendered: M" + tendered + "\n");
+            writer.write("Change: M" + String.format("%.2f", change) + "\n");
             writer.write("--------------------------------------------\n\n");
 
             writer.close();
